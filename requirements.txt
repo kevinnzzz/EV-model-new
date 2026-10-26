@@ -1,3 +1,4 @@
+# Untuk Render / Hugging Face Spaces / lokal (BUKAN untuk Vercel; Vercel memakai pyproject.toml)
 fastapi
 uvicorn[standard]
 pydantic>=2

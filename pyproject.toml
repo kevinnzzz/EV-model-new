@@ -1,0 +1,22 @@
+[project]
+name = "ev-model-api"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi",
+  "pydantic>=2",
+  "pandas==2.3.3",
+  "numpy==1.26.4",
+  "catboost==1.2.10",
+  "xgboost-cpu==3.2.0",
+]
+
+# Buang dependency turunan catboost yang tidak dipakai saat inference.
+# (marker "python_version < '0'" tidak pernah benar, jadi paketnya tidak terpasang)
+[tool.uv]
+override-dependencies = [
+  "scipy; python_version < '0'",
+  "plotly; python_version < '0'",
+  "matplotlib; python_version < '0'",
+  "graphviz; python_version < '0'",
+]

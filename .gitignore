@@ -1,6 +1,4 @@
 .venv/
-deploy-model/
 __pycache__/
 *.pyc
 .env
-tests/referensi.json
